@@ -61,25 +61,6 @@ module.exports = merge(common, {
     }
   },
 
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        manifest: {
-          chunks: "initial",
-          test: "vendor",
-          name: "vendor",
-          enforce: true
-        },
-        vendor: {
-          chunks: "initial",
-          test: "vendor",
-          name: "vendor",
-          enforce: true
-        }
-      }
-    }
-  },
-
   plugins: [
     new ExtractTextPlugin({
       filename: 'grafana.[name].css',
